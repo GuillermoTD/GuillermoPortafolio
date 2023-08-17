@@ -1,0 +1,56 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: 0;
+  font-family: system-ui, sans-serif;
+  outline:none;
+  text-decoration:none;
+  scroll-behavior: smooth;
+}
+
+section{
+  width:100vw;
+  min-height:100vh;
+  height:100vh;
+}
+
+:root{
+  --zIndex1:10, --zIndex2:20, --zIndex3:30, --zIndex4:40, --zIndex5:50;
+  --color1:#1C1E26;
+  /* --color2:#F7E987; */
+  --color2:#1f81b9;
+  --color3:#1D1B1D;
+  --color4:#151624;
+  --textColor:white;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.App{
+  width:100vw;
+  min-height:100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.CVDownload{
+  background:var(--color2);
+  width:7.5rem;
+  height:2.7rem;
+  border-radius:0.2rem;
+  cursor:pointer;
+  font-size:0.95rem;
+  font-weight: 500;
+  border:none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:var(--textColor);
+  transition:.3s;
+}
+
+.CVDownload:hover{
+  transform: scale(1.04,1.04);
+}

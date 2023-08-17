@@ -1,0 +1,54 @@
+.Contact{
+    background:var(--color4);
+    color:var(--textColor);
+    padding:1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Contact_Form{
+    width:40rem;
+    min-width:32rem;
+    height:25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+}
+
+.Contact_Form_Title{
+    font-size:2rem;
+    font-weight:500;
+    margin-bottom:1rem;
+}
+
+.Contact_Form span{
+    color:var(--color2);
+}
+
+
+.Contact_Form input{
+    border:2px solid var(--color2);
+    width:80%;
+    background:none;
+    font-size:1.2rem;
+    color:var(--textColor);
+    padding-left:0.5rem;
+    border-radius:0.5rem;
+    height:2.7rem;
+}
+
+.Contact_Form textarea{
+    border:2px solid var(--color2);
+    width:80%;
+    background:none;
+    font-size:1.2rem;
+    color:var(--textColor);
+    padding-left:0.5rem;
+    border-radius:0.5rem;
+    min-height:10rem;
+}
+    

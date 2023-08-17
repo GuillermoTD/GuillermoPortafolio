@@ -1,0 +1,63 @@
+.ProjectsItem {
+  width: 18rem;
+  height: 11rem;
+  position: relative;
+  overflow: hidden;
+  transition: .4s; 
+}
+
+
+.ProjectsItem:hover .ProjectsItem_Image{
+  transition: 0.95s ease;
+  transform: scale(1.2,1.2);
+}
+
+
+
+.ProjectsItem_Overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:30rem;
+  background: rgba(29, 77, 150, 0.8);
+  opacity: 0.6;
+  z-index:var(--zIndex5);
+  overflow:hidden;
+  transition: .9s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.ProjectsItem:hover .ProjectsItem_Overlay{
+    left:0rem;
+}
+
+
+.ProjectsItem_Image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: var(--zIndex1);
+}
+
+
+.ProjectsItem_Image img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+@media only screen and (max-width: 788px) {
+  .ProjectsItem {
+    width: 22rem;
+    height: 12rem;
+    
+  }
+
+}

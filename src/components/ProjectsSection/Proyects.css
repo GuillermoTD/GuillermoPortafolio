@@ -1,0 +1,36 @@
+
+.Proyects{
+    height:100vh;
+    background:var(--color1);
+    color:var(--textColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Proyects h2{
+    font-size:2rem;
+    margin-top:4rem;
+    margin-bottom:2rem;
+}
+
+.Projects_Grid{
+    width: 80%;
+    height: 80%;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 19rem));
+    place-content: center;
+    justify-items: center;
+}
+
+@media only screen and (max-width: 788px) {
+    .Projects {
+    }
+    .Proyects h2{
+        margin-top:16rem;
+        margin-bottom:20rem;
+    }
+  
+  }

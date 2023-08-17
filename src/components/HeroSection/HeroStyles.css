@@ -1,0 +1,199 @@
+.Hero {
+  width: 100vw;
+  height: 100vh;
+  background: var(--color1);
+  color: var(--textColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12rem;
+  z-index:-1;
+}
+
+.Hero_Description,
+.Hero_Image {
+  width: 25rem;
+  height: 22rem;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.Hero_Description_Title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.Hero_Description_Title span {
+  color: lightblue;
+}
+
+.Hero_Description_Network {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.Hero_Description_Network svg {
+  font-size: 2rem;
+  color: var(--textColor);
+  transition: 0.3s ease-in-out;
+}
+
+.Hero_Description_Network svg:hover {
+  transform: scale(1.05, 1.05);
+  color: var(--color2);
+}
+
+.Hero_Description_Buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+
+.Hero_Description_Buttons_ContactButton {
+  border: 2px solid var(--color2);
+  background: none;
+  outline: none;
+  width: 7.5rem;
+  height: 2.7rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--textColor);
+  position: relative;
+  z-index: 50;
+  transition: 0.3s;
+}
+.Hero_Description_Buttons_ContactButton p {
+  z-index: 50;
+}
+
+.Hero_Description_Buttons_ContactButton::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background: var(--color2);
+  left: 0;
+  transition: 0.3s ease;
+  z-index: -1;
+}
+
+.Hero_Description_Buttons_ContactButton:hover:before {
+  width: 100%;
+  z-index: 0;
+}
+
+.Hero_Image {
+  border: 5px solid var(--color2);
+  /* border:10px solid #D6B780; */
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 10px hwb(202 12% 27% / 0.5);
+  display: flex;
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: white;
+  animation: pulse 2s infinite;
+  transition:.4s ease;
+  z-index:0;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(31, 129, 185,0.3);
+  }
+  20% {
+    transform: scale(1);
+    box-shadow: 0 0 0 20px rgba(31, 129, 185,0.3);
+  }
+  40% {
+    transform: scale(1);
+    box-shadow: 0 0 0 25px rgba(31, 129, 185,0.3);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(31, 129, 185,0.3);
+  }
+}
+
+.Hero_Image img {
+  width: 85%;
+  height: 95%;
+  margin-top: 3rem;
+}
+
+/*Responsive styles*/
+@media only screen and (max-width: 990px)  {
+  .Hero{
+    padding:0 5rem;
+  }
+  .Hero_Image{
+    width:25%;
+    height:25%;
+    margin-right:7rem;
+    border-radius:50%;
+  }
+
+}
+
+
+@media only screen and (max-width: 768px)  {
+  .Hero{
+    flex-direction: column-reverse;
+    gap:0;
+    text-align:center;
+  }
+
+  .Hero_Description{
+    position:relative;
+    left:-5rem;
+  }
+
+  .Hero_Image{
+    width:12rem;
+    height:12rem;
+    margin-right:0;
+    position:relative;
+    left:-5rem;
+  }
+
+  .Hero_Description_Title{
+    font-size:2.1rem;
+    margin-bottom:1rem;
+  }
+
+  .Hero_Description_Network{
+    align-items: center;
+    justify-content: center;
+    margin-top:1rem;
+  }
+  .Hero_Description_Buttons{
+    align-items: center;
+    justify-content: center;
+    margin-top:1rem;
+  }
+}
+
+
+
+@media only screen and (max-width: 480px) {
+  .Hero_Description_Title{
+    font-size:1.89rem;
+    margin-bottom:1rem;
+  }
+}
